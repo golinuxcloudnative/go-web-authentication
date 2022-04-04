@@ -15,6 +15,7 @@ func main() {
 		requestUser, requestPasswd, ok := r.BasicAuth()
 		if !ok {
 			log.Printf("request forbidden, no authentication")
+			w.Header().Add("WWW-Authenticate", "Basic realm=\"Access to secret site\"")
 			w.WriteHeader(http.StatusUnauthorized)
 			return
 		}
@@ -26,7 +27,7 @@ func main() {
 		}
 
 		log.Printf("user successfully logged in, %s", requestUser)
-		w.WriteHeader(http.StatusAccepted)
+		w.Write([]byte("<h1>User authenticated</h1>"))
 		return
 	})
 
