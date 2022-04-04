@@ -2,7 +2,10 @@ module github.com/golinuxcloudnative/go-web-authentication
 
 go 1.18
 
-require github.com/TylerBrock/colorjson v0.0.0-20200706003622-8a50f05110d2
+require (
+	github.com/TylerBrock/colorjson v0.0.0-20200706003622-8a50f05110d2
+	golang.org/x/crypto v0.0.0-20220331220935-ae2d96664a29
+)
 
 require (
 	github.com/fatih/color v1.13.0 // indirect
