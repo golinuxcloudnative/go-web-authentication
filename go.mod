@@ -4,6 +4,8 @@ go 1.18
 
 require (
 	github.com/TylerBrock/colorjson v0.0.0-20200706003622-8a50f05110d2
+	github.com/golang-jwt/jwt/v4 v4.4.1
+	github.com/google/uuid v1.3.0
 	golang.org/x/crypto v0.0.0-20220331220935-ae2d96664a29
 )
 
